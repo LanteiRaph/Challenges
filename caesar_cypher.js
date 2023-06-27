@@ -1,11 +1,15 @@
-
-
+/**
+ * 
+ * @param {message to encode} s 
+ * @param {shift characters} k 
+ * @returns encoded string
+ */
 function caesarCipher(s, k) {
     //Start with a empy encoded string
     let newText = '';
     //Work with lower case letter, and handle upper case letters. 
     const alphaebets = [...'abcdefghijklmnopqrstuvwxyz'];
-    //
+    //Update k if the k is greater than 26. 
     if (k > 26) {
         k = k % 26
     }
